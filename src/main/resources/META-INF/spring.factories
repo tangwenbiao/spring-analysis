@@ -2,3 +2,5 @@
 #com.aop.init.TestInit
 #org.springframework.boot.env.EnvironmentPostProcessor=\
 #com.aop.init.TestInit
+org.springframework.context.ApplicationListener=\
+  com.spring.analysis.listener.ListenerToFile
