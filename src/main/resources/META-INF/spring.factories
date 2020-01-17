@@ -1,0 +1,4 @@
+#org.springframework.context.ApplicationContextInitializer=\
+#com.aop.init.TestInit
+#org.springframework.boot.env.EnvironmentPostProcessor=\
+#com.aop.init.TestInit
