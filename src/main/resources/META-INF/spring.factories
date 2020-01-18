@@ -1,5 +1,5 @@
 #org.springframework.context.ApplicationContextInitializer=\
-#com.aop.init.TestInit
+#com.spring.analysis.contextinit.TestApplicationContextInitializer
 #org.springframework.boot.env.EnvironmentPostProcessor=\
 #com.aop.init.TestInit
 org.springframework.context.ApplicationListener=\
