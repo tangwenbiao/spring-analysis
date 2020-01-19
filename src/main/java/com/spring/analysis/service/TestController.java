@@ -7,7 +7,11 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class TestController {
 
-    @Autowired
-    private TestService testService;
+  @Autowired
+  private TestService testService;
+
+  public void controller() {
+    System.out.println("controller!!!!");
+  }
 
 }

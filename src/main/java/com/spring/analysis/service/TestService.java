@@ -22,36 +22,31 @@ import org.springframework.stereotype.Service;
 @DependsOn({"testController"})
 public class TestService implements SmartInitializingSingleton, ApplicationContextAware {
 
-    @Autowired
-    private EnvironmentAware testAware;
+  @Autowired
+  private EnvironmentAware testAware;
 
-    @Autowired
-    private TestAutowrite testAutowrite;
+  @Autowired
+  private TestAutowrite testAutowrite;
 
-    @Autowired
-    private TestController testController;
+  @Autowired
+  private TestController testController;
 
-    private ApplicationContext applicationContext;
+  private ApplicationContext applicationContext;
 
-    public void test(@Autowired TestController testController){
-        System.out.println();
-    }
+  public void test(@Autowired TestController testController) {
+    System.out.println();
+  }
 
-    public void test1(@Value("${abc.a:1}")Integer value){
-        System.out.println();
-    }
+  public void test1(@Value("${abc.a:1}") Integer value) {
+    System.out.println();
+  }
 
-    @Override
-    public void afterSingletonsInstantiated() {
-        Object testFactoryBean = applicationContext.getBean("testFactoryBean");
-        System.out.println();
-    }
+  @Override
+  public void afterSingletonsInstantiated() {
+  }
 
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
-        Object testFactoryBean = applicationContext.getBean("testFactoryBean");
-        System.out.println();
-
-    }
+  @Override
+  public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+    testController.controller();
+  }
 }
